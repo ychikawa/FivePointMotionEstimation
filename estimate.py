@@ -19,7 +19,6 @@ def generate_pts(K1, K2, n_point=50, min_point=20, add_noise=False, sigma=1e-3):
         E_gt = E_gt/E_gt[2][2]
         P1 = K1@np.hstack([np.eye(3), np.zeros((3, 1))])
         P2 = K2@np.hstack([R, t.reshape((3, 1))])
-        n_point = 50
         X = np.vstack([np.random.uniform(size=(3, n_point))-0.5, np.ones((1, n_point))])
         X1 = P1@X
         X2 = P2@X
