@@ -8,7 +8,6 @@ def generate_pts(K1, K2, n_point=50, min_point=20, add_noise=False, sigma=1e-3):
     size=0
     while size<min_point:
         theta = np.deg2rad((np.random.uniform()-0.5)*360)
-        theta = np.deg2rad(21)
         axis = np.random.uniform(size=(3))
         axis = axis/np.sqrt(np.sum(axis**2))
         v = np.array([[0, -axis[2], axis[1]], [axis[2], 0, -axis[0]], [-axis[1], axis[0], 0]])
